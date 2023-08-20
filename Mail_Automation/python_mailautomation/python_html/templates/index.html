@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Send Email</h1>
+        <form action="/send" method="POST" autocomplete="off">
+        <label for="to_email">To:</label>
+        <input type="email" name="to_email" id="to_email" required placeholder="Provide Email ID">
+
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" required placeholder="Subject for Email">
+
+        <label for="message">Email Body:</label>
+        <textarea name="message" id="message" required placeholder="Email Body"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
